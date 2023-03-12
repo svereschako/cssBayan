@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Comfortaa', cursive;
+}
+
+input[type="checkbox"] {
+	display: none;
+}
+
+.container {
+	width: 50vw;
+	height: 60vh;
+	margin: 15vh auto;
+	background-color: #b1dee4;
+	border: 7px solid #f1f2f2;
+	border-radius: 2%;
+	overflow: hidden;
+}
+
+.item {
+	height: 5vh;
+    margin: 1em 2em;    
+    border-bottom: 1px solid black;    
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.accordion-label {
+	cursor: pointer;
+}
+
+.fa-circle-plus {		
+	transition: 0.3s;
+}
+
+[type="checkbox"]:checked ~ .accordion-label .fa-circle-plus {
+	transform: rotate(45deg);
+}
+
+.content {	
+	width: 37vw;
+    height: 0;
+	background-repeat: no-repeat;
+    background-size: contain;    
+    background-position: center;
+    transition: 0.5s;
+}
+
+.item:nth-child(1) .content {
+	background-image: url("https://images.unsplash.com/photo-1583081205988-853ce245e058?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+}
+
+.item:nth-child(2) .content {
+	background-image: url("https://images.unsplash.com/photo-1648073141651-c61c052d9079?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+}
+
+.item:nth-child(3) .content {
+	background-image: url("https://images.unsplash.com/photo-1650564365557-b987ac5d219e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+}
+
+.item:nth-child(4) .content {
+	background-image: url("https://images.unsplash.com/photo-1649007694448-484379fc1452?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+}
+
+.item:nth-child(5) .content {
+	background-image: url("https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+}
+
+.item:has([type="checkbox"]:checked) {
+	height: 20vh;
+}
+
+[type="checkbox"]:checked ~ .content {
+	height: 16vh;
+}
+
+@media (max-width: 820px) {
+	.item {
+		font-size: 24px;
+	}
+
+}
+
+@media (max-width: 500px) {
+	.item {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 320px) {
+	.item {
+		font-size: 12px;
+	}
+	
+}
