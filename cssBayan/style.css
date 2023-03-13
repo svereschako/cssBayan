@@ -98,3 +98,10 @@ input[type="checkbox"] {
 	}
 	
 }
+
+@media (hover: hover) {
+	
+	.accordion-label:hover {
+		color: #fff;
+	}
+}
